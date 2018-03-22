@@ -1,0 +1,12 @@
+<%= "Gym classes list:" %>
+
+<br>
+<br>
+
+<% @klasses.each do |klass| %>
+  <%= link_to(klass.name, "/klasses/#{klass.id}") %>
+  
+  <br>
+ 
+  
+<% end %>

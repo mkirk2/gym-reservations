@@ -1,5 +1,10 @@
-<%= @user.name.capitalize %>'s page
+<%= @user.name.capitalize %>
 <br/>
 Available classes :
+<br/>
+<% @klasses.each do |klass| %>
+<%= link_to(klass.name, '/klasses/') %>
 
-<%= @reservations.user_id %>
+<br/>
+
+<% end %>

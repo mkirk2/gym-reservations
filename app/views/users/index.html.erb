@@ -1,5 +1,13 @@
+<%= "Gym member's list:" %>
+
+<br>
+<br>
+
 <% @users.each do |user| %>
   <%= link_to(user.name, "/users/#{user.id}") %>
-  <%= button_to "delete", user, :method => :delete %>
+  
   <br>
+  <!--<%= button_to "delete", user, :method => :delete %>-->
+  
 <% end %>
+

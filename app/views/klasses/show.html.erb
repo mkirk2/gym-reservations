@@ -1,0 +1,8 @@
+<%= @klass.name.capitalize %>
+<br>
+Available users:
+<br>
+<% @users.each do |user| %>
+<%= link_to(user.name, '/user/') %>
+<br>
+<% end %>
