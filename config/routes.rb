@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
     resources :users 
-      # post 'users/:id/reservations' => 'reservations#user_reservations'
+    
+    resources :reservations, :only => [:show, :new, :create, :index]
       
     resources :klasses
 

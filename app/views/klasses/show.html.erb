@@ -3,6 +3,8 @@
 Available users:
 <br>
 <% @users.each do |user| %>
-<%= link_to(user.name, '/user/') %>
+<div> <%= user.name %> </div>
+<%= button_to 'reserve', {reservation: {user_id: user.id, klass_id: @klass.id}, controller: 'reservations', action: 'create', :method => :post} %>
+
 <br>
 <% end %>

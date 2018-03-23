@@ -1,12 +1,17 @@
-<%= "Gym classes list:" %>
+<h2> <%= "Gym classes list:" %> </h2>
 
-<br>
 <br>
 
 <% @klasses.each do |klass| %>
-  <%= link_to(klass.name, "/klasses/#{klass.id}") %>
+  <%= link_to(klass.name.capitalize, "/klasses/#{klass.id}") %>
+  <%= klass.date %>
+  <%= klass.time %>
+  <br>
+  <%= klass.sign_ups %>
   
   <br>
+  <br>
+  
  
   
 <% end %>

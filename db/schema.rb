@@ -22,6 +22,8 @@ ActiveRecord::Schema.define(version: 20180321210132) do
   create_table "reservations", force: :cascade do |t|
     t.integer "user_id"
     t.integer "klass_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
