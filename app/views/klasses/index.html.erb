@@ -2,16 +2,43 @@
 
 <br>
 
-<% @klasses.each do |klass| %>
-  <%= link_to(klass.name.capitalize, "/klasses/#{klass.id}") %>
-  <%= klass.date %>
-  <%= klass.time %>
-  <br>
-  <%= klass.sign_ups %>
+<table id="klass-table">
+  <tr>
+    <th>Class</th>
+    <th>Day</th> 
+    <th>Time</th>
+    <th>Capacity</th>
+  </tr>
   
-  <br>
-  <br>
-  
- 
-  
+  <tr>
+    <% @klasses.each do |klass| %>
+    <td> <%= link_to(klass.name.capitalize, "/klasses/#{klass.id}") %> </td>
+    <td> <%= klass.date %> </td>
+    <td> <%= klass.time %> </td>
+    <td> <%= klass.sign_ups %> </td>
+  </tr>
+
 <% end %>
+
+<style>
+
+  #klass-table th, #klass-table td {
+    width: 30%;
+    border: 2px solid black;
+    border-color: salmon;
+  }
+  
+  #klass-table {
+    margin-left: 50px;
+  }
+  
+  #klass-table th {
+    background-color: salmon;
+    border-color: black;
+  }
+  
+  #klass-table tb {
+    
+  }
+  
+</style>
